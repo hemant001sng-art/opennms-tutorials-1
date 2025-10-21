@@ -1,6 +1,7 @@
-# Session 3
 
 [Main Menu](../README.md) | [Session 3](../session3/README.md)
+
+# Session 3
 
 ## Events, Alarms and Traps
 
