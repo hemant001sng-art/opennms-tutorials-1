@@ -99,7 +99,7 @@ Grafana Web UI 3000/tcp ─────┼────│   172.20.0.26/24   ├
 
 ### Hints
 
-* Assign the role `ROLE_FILESYSTEM_EDITOR` to the `admin`, which allows you to edit configuration files through the web user interface. (See [Session 2 Modifying configuration files through UI](../session2/README.md2#modifying-configuration-files-through-the-ui)
+* Assign the role `ROLE_FILESYSTEM_EDITOR` to the `admin`, which allows you to edit configuration files through the web user interface. (See [Session 2 Modifying configuration files through UI](../session2/README.md#modifying-configuration-files-through-the-ui)
 * If you want to start from scratch, run `docker compose down -v`, it will delete the database and the configuration files.
   You can start again with `docker compose up -d` afterwards.
 * Ad-hoc data collection for a node: `opennms:collect -l Default -n 4 org.opennms.netmgt.collectd.SnmpCollector 192.168.42.34`
