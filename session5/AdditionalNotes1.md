@@ -71,3 +71,6 @@ curl -u admin http://localhost:8980/opennms/rest/measurements/node%5B6%5D.nodeSn
 ```
 
 REST API call examples can be used from `rest-examples` directory using the REST API tool [Bruno](https://www.usebruno.com).
+
+### database tuning
+* [PGtune](https://pgtune.leopard.in.ua) tool for generating a configuration in PostgreSQL
