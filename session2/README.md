@@ -86,7 +86,7 @@ The following environment variables can be injected to the container, but if the
       OPENNMS_DBUSER: 'opennms'
       OPENNMS_DBPASS: 'opennms'
 ```
-These particular database settings set values in the file [/etc/opennms-datasources.xml](../../main/pristine-opennms-config-files/etc-pristine/opennms-datasources.xml)
+These particular database settings set values in the file [etc/opennms-datasources.xml](../../main/pristine-opennms-config-files/etc-pristine/opennms-datasources.xml)
 
 If you overlay `opennms-datasources.xml`, the environment variables will not be applied on container start.
 
