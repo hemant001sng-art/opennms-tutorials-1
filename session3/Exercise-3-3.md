@@ -22,6 +22,13 @@ For this reason, the last file in the list is always [etc/events/opennms.catch-a
 Normally, we wouldn't want to alter a configuration directly inside a container because we will loose this configuration when the container re-starts.
 However as an experiment, we are going to directly modify the eventconf.xml inside our container to include a definition for this new trap.
 
+---
+**NOTE**
+Note that this exercise could also be performed using the file editing ui covered in [Session 2 modifying configuration files through the ui](../session2/README.md#modifying-configuration-files-through-the-ui)  
+However remember to reload the configuration as described below after editing it.
+
+---
+
 The netsnmp containers already have the [vi editor](https://devhints.io/vim) installed but and you can use this if you wish
 
 However we can make our lives a bit simpler if we also install the [nano editor](https://www.nano-editor.org/dist/latest/nano.html) because it is easier to use.
