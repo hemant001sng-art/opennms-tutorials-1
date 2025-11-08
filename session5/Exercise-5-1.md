@@ -128,6 +128,7 @@ Question 3: What are the steps you take to add the load average metrics to the c
   * MIB object group name `<group name="exercise_5.1-loadavg"`
   * Create a system definition that matches the linux-01, linux-02 system object ID's
   * Include the `exercise_5.1-group` in the `default` snmp-collection in the `datacollection-config.xml`
+  * Reload Collectd configuration with `ssh admin@localhost -o UserKnownHostsFile=/dev/null -p 8101 reload-daemon Collectd`
 - [ ] Verify if the metrics are collected as RRD files in the file system with:
 
 ```
