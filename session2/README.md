@@ -48,7 +48,7 @@ git tag -a v1.0 -m 'Initial base configuration of OpenNMS 33.0.6'
 After this, you can commit, tag and annotate any further changes you make.
 
 In containerised installs, you should version control the configurations injected into the container.
-You will need to make sure that the files you are overlaying are baselined against the version of OpeNNMS in the selected container otherwise the system may not start.
+You will need to make sure that the files you are overlaying are baselined against the version of OpenNMS in the selected container otherwise the system may not start.
 We will talk about updating an installation in a later module.
 
 The `/opt/opennms/share/xsds` directory contains the XML Schema Definitions for the xml files. 

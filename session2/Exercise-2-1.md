@@ -156,10 +156,13 @@ Change the read and write community strings from `public` to `chubb`  and save t
 
 ![alt text](../session2/images/chubb-camera_01_SNMPConfig.png "Figure chubb-camera_01_SNMPConfig.png")
 
-When you now look at the chubb-camera_01 node page, you should see SNMP information 
+When you now look at the chubb-camera_01 node page, you should now see SNMP information 
 
 ![alt text](../session2/images/chubb-camera_01_withSNMP.png "Figure chubb-camera_01_withSNMP.png")
 
+This SNMP configuration UI is backed by the [etc/snmp-config.xmll](../../main/pristine-opennms-config-files/etc-pristine/snmp-config.xml) file.
+
+By default, this contains a very simple default configuration however an example file showing more complex configurations is also provided at [etc/examples/snmp-config.xml](../../main/pristine-opennms-config-files/etc-pristine/examples/snmp-config.xml)
 
 ## Summary
 
@@ -169,14 +172,13 @@ In this exercise,
 * We have modified and synchronised a requisition corresponding to a network of devices .
 * We have set the SNMP community strings to access  a particular node.
 
-
 The OpenNMS provisioning mechanism is quite complex and is supported by a number of ReST calls and also the user interface.
 OpenNMS uses requisitions to externally provision nodes, interfaces and metadata.
-The mechanism allows for a mixture forced provisioning and directed discovery of services or interfaces on a node.
+The mechanism allows for a mixture of forced provisioning and directed discovery of services or interfaces on a node.
 
 We have also seen that internally a requisition is represented as an XML document referred to as a `Foreign Source` which contains node definitions, each uniquely referenced using a `Foreign id`. 
 
-Within OpenNMS nodes are given a sequential database id as they are provisioned, but externally, the node is identified by it’s Foreign Source and Foreign ID. 
+Within OpenNMS nodes are given a sequential database id as they are provisioned, but externally, the node should be identified by it’s Foreign Source and Foreign ID. 
 
 It is also possible to use a ReST api to provision OpenNMS through the requisition mechanism.
 
