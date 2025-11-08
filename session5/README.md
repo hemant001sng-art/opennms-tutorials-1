@@ -8,7 +8,7 @@ In [Session 2](../session3/README.md#service-and-web-site-monitoring) we saw how
 The service monitoring function detects and polls services to ensure they are up.
 It only stores the response time for each service request and events corresponding to the service life-cycle (discover, service up, service down etc).
 
-In this session we will look at a more advanced OpenNMS [Performance Data Collection](https://docs.opennms.com/horizon/30/operation/performance-data-collection/introduction.html) capability which collects performance statistics on a regular interval from the service itself.
+In this session we will look at a more advanced OpenNMS [Performance Data Collection](https://docs.opennms.com/horizon/33/operation/deep-dive/performance-data-collection/introduction.html) capability which collects performance statistics on a regular interval from the service itself.
 
 [performance-management-Introduction.pdf](../session5/performance-management-Introduction.pdf) Slides for this session.
 
@@ -20,9 +20,10 @@ You can see which organisation is assigned a  sysOid enterprise number at [[IANA
 
 ## Overview
 
-The majority of performance data collection in SNMP deployments is performed using SNMP but other performance data protocols are supported including plain text/CSV, ReST/XML/Json, Java JMX and WBEM. 
+The majority of performance data collection in SNMP deployments is performed using SNMP but many other performance data protocols are supported including plain `text/CSV`, `ReST/XML/Json`, `Java JMX` and `WBEM`. 
 
-For more details see [Performance Data Collectors](https://docs.opennms.com/horizon/30/reference/performance-data-collection/collectors.html). 
+For more details see the [Performance Data Collectors Reference](https://docs.opennms.com/horizon/33/reference/performance-data-collection/introduction.html). 
+
 In this session we will concentrate on SNMP data collection.
 
 | Config File | Description |
