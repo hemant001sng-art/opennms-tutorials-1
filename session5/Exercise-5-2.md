@@ -3,6 +3,33 @@
 
 # Exercise 5-2 Collecting from an SNMP Table
 
+## Introduction
+
+In [Exercise-5-1](../session5/Exercise-5-1.md) we looked at extending the default data collection package to collect data from a discrete set of OID's for a device. 
+
+In this exercise we will look at storing data from an SNMP table and also how to define a new data collection package different from the default package.
+
+Many SNMP measurements are exposed as tables, where the user recognisable name of a value may be in one column, while the actual value may be in another column of the same line entry in the table.
+
+For instance if we do an SNMP walk of the hrStorage table (oid .1.3.6.1.2.1.25.2.3) using mibbrowser, we will see the following result:
+
+![alt text](../session5/images/hrStorageTable-mibbrowser.png "Figure hrStorageTable-mibbrowser.png")
+
+You can see that the hrStorageDescr column gives names to the values in the other columns (Physical Memory, Virtual Memory /dev etc)
+
+We dont necessarily know in advance how many of these resources exist or how these resources are named in the table, so we need a way to store all the rows of the data in the table with usable names corresponding to the names found in the table.
+In OpenNMS, we want the name and path to the rrd files to be related to the names in this table but we can see already that the names have spaces and slashes `/` which we definitely don't want in the name of a file.
+
+OpenNMS has a variety of storage strategies which can interpret the table names and create a resource path which defines where to store and name the rrd files for each data collection. 
+
+There a number of strategies described in [OpenNMS Resource Types](https://docs.opennms.com/meridian/2024/operation/deep-dive/performance-data-collection/resource-types.html). 
+Some of these are quite complex and would require a bit of study of existing configurations where they are used. 
+
+However, in this case  the answer is to use the relatively simple `SiblingColumnStorageStrategy` which applies regular expressions to the resource names in the table in order to create a clean path to the rrd where we will store the data.
+
+
+## Tasks
+
 ### Step 1: Create a resource type for entries in the table
 
 ![hr-description.png](images/hr-description.png)
