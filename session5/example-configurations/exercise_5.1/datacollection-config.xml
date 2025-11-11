@@ -10,6 +10,7 @@
       
       <!-- Custom collection groups for the default collection go here -->
 
+      <!-- Exercise 5.1 -->
       <include-collection dataCollectionGroup="exercise_5.1-group"/>
 
       <include-collection dataCollectionGroup="MIB2"/>

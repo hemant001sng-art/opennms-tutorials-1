@@ -107,6 +107,7 @@
       <include-collection dataCollectionGroup="ejn"/>
    </snmp-collection>
 
+   <!-- Exercise 5.2 -->
    <snmp-collection name="exercise-5.2-snmp-collection" snmpStorageFlag="select">
       <rrd step="300">
          <rra>RRA:AVERAGE:0.5:1:2016</rra>

@@ -10,6 +10,7 @@
       
       <!-- Custom collection groups for the default collection go here -->
 
+      <!-- Exercise 5.1 -->
       <include-collection dataCollectionGroup="exercise_5.1-group"/>
 
       <include-collection dataCollectionGroup="MIB2"/>
@@ -109,5 +110,17 @@
          <rra>RRA:MIN:0.5:480:366</rra>
       </rrd>
       <include-collection dataCollectionGroup="ejn"/>
+   </snmp-collection>
+
+   <!-- Exercise 5.2 -->
+   <snmp-collection name="exercise-5.2-snmp-collection" snmpStorageFlag="select">
+      <rrd step="300">
+         <rra>RRA:AVERAGE:0.5:1:2016</rra>
+         <rra>RRA:AVERAGE:0.5:12:1488</rra>
+         <rra>RRA:AVERAGE:0.5:288:366</rra>
+         <rra>RRA:MAX:0.5:288:366</rra>
+         <rra>RRA:MIN:0.5:288:366</rra>
+      </rrd>
+      <include-collection dataCollectionGroup="exercise_5.2-group"/>
    </snmp-collection>
 </datacollection-config>
