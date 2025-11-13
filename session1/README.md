@@ -58,7 +58,7 @@ In addition, the [OpenNMS Mattermost chat](https://chat.opennms.com/) channels a
 
 ## Getting Started Tutorial
 
-The OpenNMS documentation covers in some detail the process of [Setting up a production Horizon Instance](https://docs.opennms.com/horizon/33/deployment/core/introduction.html).
+The OpenNMS documentation covers in some detail the process of [Setting up a production Horizon Instance](https://docs.opennms.com/horizon/33/deployment/core/getting-started.html).
 This can be quite daunting for a newcomer and in particular for people just wanting a system for this set of tutorials.
 Fortunately, help is at hand in the form of simple installation scripts and docker-compose examples.
 
